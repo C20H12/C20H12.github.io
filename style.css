@@ -165,10 +165,6 @@ p+button:focus::after{
 }
 
 /* make the dialogs not take up the whole screen and add a transparent backdrop, then give it a font and hide the scroll bar */
-@font-face {
-  font-family: customFont;
-  src: url("./font.ttf");
-}
 dialog{
   height: 70%;
   width: 70%;
@@ -178,7 +174,7 @@ dialog{
   background: linear-gradient(180deg, rgba(165,255,168,0) 0%, rgba(126,255,137,1) 100%);
   background-color: white;
   
-  font-family: customFont;
+  font-family: Arial, sans-serif;
   font-size: 30px;
 }
 dialog::-webkit-scrollbar {
