@@ -167,7 +167,7 @@ p+button:focus::after{
 /* make the dialogs not take up the whole screen and add a transparent backdrop, then give it a font and hide the scroll bar */
 @font-face {
   font-family: customFont;
-  src: url("./c&cnew.ttf");
+  src: url("./font.ttf");
 }
 dialog{
   height: 70%;
@@ -238,6 +238,11 @@ dialog button:hover::after{
   border: 2px solid black;
   border-radius: 15px;
   padding: 0 15px 0 15px;
+}
+#aboutme>#picture{
+  width: 241px;
+  height: 177px;
+  image-rendering: pixelated;
 }
 
 /* styles the my projects secton. using a display of grid, it can function like a html table but with more flexibility. Here giving the wrapper div 2 colums with some gap in the middle, and each element inside centered. then adds a hover style to the links */
