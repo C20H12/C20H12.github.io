@@ -1,0 +1,306 @@
+/* reset default and set background. Gradient 180 means vertical, then 2 starting and end colors, each positioned at the edge of the box (100%)*/
+body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  
+  background: linear-gradient(180deg, rgba(165,255,168,0) 0%, rgba(126,255,137,1) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* title, give it height of 200, a text color(green) and border, then set the font to airal and align it horizontally with text-align, and vertically by setting the line-height to the same as the box */
+.heading{
+  height: 200px;
+  
+  color: #00ff04;
+  border: 2px solid yellow;
+  background: linear-gradient(180deg, rgba(9,9,121,1) 0%, rgba(0,248,255,1) 100%);
+  
+  font-family: Arial;
+  font-size: 40px;
+  text-align: center;
+  line-height: 200px;
+}
+
+/* style the button. Giving them a margin and colors, and a border with rounded corners
+the hovor one is the same except the text become bigger. You cannot use the ::hover because of a quirky react thing, further explained in the js file */
+.btn{
+  margin: 8px;
+  font-size: 20px;
+  
+  color: #ffe74d;
+  background-color: #00c200;
+  border: 2px solid cyan;
+  border-radius: 15px;
+}
+.btn-hover{
+  margin: 8px;
+  font-size: 30px;
+  
+  color: orange;
+  background-color: #1e00ff;
+  border: 2px solid red;
+  border-radius: 15px;
+
+}
+/* styles the count text(you viewed x times). The ::after is for the red dot that appears when you havent viewed it*/
+.count{
+  position: relative;
+  
+  font-family: monospace;
+  font-size: 15px;
+  font-weight: bold;
+  
+  color: #005c02;
+}
+.count>pre::after{
+  content: "";
+  position: absolute;
+  
+  padding: 10px;
+  top: 50px;
+  right: 20px;
+  
+  border: 1px solid red;
+  border-radius: 100%;
+  background: rgb(255,0,0);
+}
+/* style the part around the buttons, with a curved border on the right, and if the content overflows then move to a new line (the span for the count) */
+.navElement{
+  height: 100px;
+  width: 230px;
+  
+  border-radius: 50px;
+  border-right: 2px solid cyan;
+  
+  padding: 5px;
+  margin: 0 10px;
+  
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  flex-flow: row wrap;
+}
+/* styles all 3 of the nav options, positioning them at the center */
+#allNavSections{
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  border: 2px solid yellow;
+  background: linear-gradient(180deg, rgba(255,242,165,1) 0%, rgba(255,175,126,1) 100%);
+}
+
+
+/* more main page stuff */
+#feat{
+  font-family: Arial;
+  border-bottom: 4px dotted yellow;
+  text-align: center;
+  margin: 130px 0 0 0;
+}
+.img{
+  height: 450px;
+  width: 650px;
+  margin: 0 auto 30px auto;
+  background-image: url("./specter v3.png");
+  image-rendering: pixelated;
+}
+.img::after{
+  content: "My amazing drawing";
+  position: relative;
+  left: 450px;
+  top: 220px;
+  
+  font-family: "Comic Sans MS";
+  font-size: 20px;
+  
+  color: grey;
+  border-bottom: 2px solid #83c383;
+}
+#totop{
+  left: 90vw;
+  position: relative;
+  padding: 5px;
+  
+  font-size: 20px;
+  font-family: Arial;
+  
+  color: #ffe74d;
+  background-color: #00c200;
+  border: 2px solid cyan;
+  border-radius: 15px;
+}
+#totop:hover{
+  color: orange;
+  background-color: #1e00ff;
+  border: 2px solid red;
+}
+hr{
+  border: 2px dotted yellow;
+}
+hr+p, p+button{
+  display: inline-block;
+  position: relative;
+  left: 40vw;
+}
+/* makes the share button pop up a copied message when you click on it */
+p+button{
+  width: 140px;
+  white-space: nowrap;
+  
+  background-color: #b8b8b8;
+  color: blue;
+  border: 1px solid red;
+}
+p+button:focus::after{
+  content: "Copied!";
+  position: absolute;
+  left: 50px;
+  bottom: 20px;
+  
+  color: #ffdd00;
+  border: 1px solid red;
+  background-color: grey;
+}
+
+/* make the dialogs not take up the whole screen and add a transparent backdrop, then give it a font and hide the scroll bar */
+@font-face {
+  font-family: customFont;
+  src: url("./c&cnew.ttf");
+}
+dialog{
+  height: 70%;
+  width: 70%;
+  border-radius: 20px;
+  padding: 30px;
+  
+  background: linear-gradient(180deg, rgba(165,255,168,0) 0%, rgba(126,255,137,1) 100%);
+  background-color: white;
+  
+  font-family: customFont;
+  font-size: 30px;
+}
+dialog::-webkit-scrollbar {
+  display: none;
+}
+dialog::backdrop{
+  background: rgba(155,155,155,0.7);
+}
+dialog button{
+  position: fixed;
+  width: 30px;
+  height: 50px;
+  bottom: 5vh;
+  
+  background-image: url("./back.png");
+  transform: rotate(-90deg);
+  border: 2px solid green;
+}
+dialog button:hover{
+  border: 3px solid yellow;
+}
+dialog button:hover::after{
+  content: "BACK";
+  position: absolute;
+  right: 15px;
+  bottom: 5px;
+  
+  transform: rotate(90deg);
+  font-size: 20px;
+  color: blue;
+}
+
+/* styles the elements inside aboutme. giving everything a border, making the text centered, removing the default margin from p elements then adding a padding */
+#aboutme>p{
+  text-align: center;
+  padding: 25px 25px 35px 25px;
+  margin: 0;
+  border-bottom: 2px solid green;
+}
+#aboutme>img, #aboutme>a{
+  position: relative;
+  left: 20%;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+#aboutme>a{
+  text-decoration: none;
+  margin-left: 30px;
+  padding: 0 10px 0 10px;
+  bottom: 10px;
+}
+#aboutme>img+h3{
+  display: inline-block;
+  position: absolute;
+  left: 60%;
+  font-size: 40px;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 0 15px 0 15px;
+}
+
+/* styles the my projects secton. using a display of grid, it can function like a html table but with more flexibility. Here giving the wrapper div 2 colums with some gap in the middle, and each element inside centered. then adds a hover style to the links */
+#projects>p{
+  margin: 0 0 20px 0;
+  
+  font-size: 55px;
+  text-align: center;
+}
+#projects div.table{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  
+  padding: 10px;
+  background-color: rgb(88, 99, 254);
+}
+#projects div, #projects a{
+  border-radius: 15px;
+}
+div.table div.elem {
+  padding: 10px;
+  
+  font-size: 35px;
+  text-align: center;
+  
+  border: 2px solid white;
+  background-color: rgb(173, 255, 180);
+}
+.elem>a{
+  padding: 0 15px 0 15px;
+  width: 100%;
+  
+  text-decoration: none;
+  
+  background-color: rgba(255,255,255,0.6);
+  border: 2px solid white;
+  color: #5863ff;
+}
+.elem>a:hover{
+  border: 2px solid #5862ff;
+  background-color: rgba(255,255,255,1);
+  color: #ff7b00;
+}
+
+/* styles the contact dialog. sets the font sizes and align the text in the center, then giving the email link a hover style */
+#contact>h3{
+  font-size: 50px;
+}
+#contact>div{
+  text-align: center;
+  font-size: 40px;
+
+  border: 2px solid green;
+  border-radius: 15px;
+}
+#contact>div>a{
+  color: black;
+  text-decoration: none;
+}
+#contact>div>a:hover{
+  color: rgb(0,248,255);
+}
+#contact>div>p:nth-child(3){
+  text-decoration: underline;
+}
