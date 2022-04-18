@@ -1,7 +1,7 @@
 //simple jsx return
 function A(){
   return (
-    <h1 className="heading">My Web Portfolio, Upgraded!</h1>
+    <h1 className="heading">My Web Portfolio!</h1>
   )
 }
 
