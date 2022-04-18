@@ -1,7 +1,92 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>My Web Page</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+    <dialog id="aboutme">
+      <img id="picture" src="./aaa.png" alt="Screenshot 2022-04-12 14322"/>
+      <h3>Hi there</h3>
+      <a href="./aaa.png" download>Save</a>
+      <p class="text">Hello, I am untitled! I like to play video games and do various progamming stuff. Here's an amazing picture of mine and some placeholder text.</p>
+      <p class="text" >The quick brown fox jumps over the lazy dog. The lazy dog was jumped over by the quick brown fox. The brown quick dog jumps over the lazy fox. the lazy brown fox jumps over the quick dog. The quick fox jumps over the lazey brown dog.</p>
+      <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, uldivices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, uldivices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, uldivices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. </p>
+      <form method="dialog">
+        <button></button>
+      </form>
+    </dialog>
+
+    
+    <dialog id="projects">
+      <p>My Projects:</p>
+      <div class="table">
+        <div class="elem">
+          <p>Weapons Of the Day Search</p>
+          <a href="https://drive.google.com/file/d/1vo5U7iROCLK7aXg2a8yD15pMG6-XwxLc/view?usp=sharing" target="_blank">Link</a>
+        </div>
+        <div class="elem">
+          <p>My other project</p>
+          <a href="#" target="_blank">Link</a>
+        </div>
+        <div class="elem">
+          <p>My other project</p>
+          <a href="#" target="_blank">Link</a>
+        </div>
+        <div class="elem">
+          <p>My other project</p>
+          <a href="#" target="_blank">Link</a>
+        </div>
+        <div class="elem">
+          <p>My other project</p>
+          <a href="#" target="_blank">Link</a>
+        </div>
+        <div class="elem">
+          <p>My other project</p>
+          <a href="#" target="_blank">Link</a>
+        </div>
+        <div class="elem">
+          <p>My other project</p>
+          <a href="#" target="_blank">Link</a>
+        </div>
+        <div class="elem">
+          <p>My other project</p>
+          <a href="#" target="_blank">Link</a>
+        </div>
+      </div>
+      <form method="dialog">
+        <button></button>
+      </form>
+    </dialog>
+
+    
+    <dialog id="contact">
+      <h3>Contact Info</h3>
+      <div>
+        <h4><i>Science Fun</i></h4>
+        <a href="mailto:moowolvquackmeowao@gmail.com">moowolvquackmeowao@gmail.com</a>
+<!--         mailto will open the user's email -->
+        <p>My profession</p>
+      </div>
+      <form method="dialog">
+        <button></button>
+      </form>
+    </dialog>
+    <div id="root"></div>
+    <h2 id="feat">Featured</h2>
+    <div class="img">
+    </div>
+    <a id="totop" href="#">To Top</a>
+    <hr/>
+    <p>©2022 Designed By Me, My Company</p>
+    <button onclick="navigator.clipboard.writeText(window.location.href);">Share This Page</button>
+<!--     write the url to this page to the clipboard when clicked -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script type="text/babel" src="script.js"></script>
+  </body>
 </html>
