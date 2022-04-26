@@ -118,6 +118,16 @@ the hovor one is the same except the text become bigger. You cannot use the ::ho
   color: grey;
   border-bottom: 2px solid #83c383;
 }
+
+.eventsEditor {
+  height: 450px;
+  width: 650px;
+  margin: 0 auto 30px auto;
+  border: 5px solid orange;
+  border-radius: 15px;
+  text-align: center;
+}
+
 #totop{
   left: 90vw;
   position: relative;
