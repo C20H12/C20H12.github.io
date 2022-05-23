@@ -1,0 +1,76 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.wrap {
+  border: 3px solid black;
+  border-radius: 3em;
+  width: 28em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.disp {
+  text-align: right;
+  padding: 0;
+  margin: .5em 0;
+  border-bottom: 2px solid blue;
+  word-wrap: break-word;
+  height: auto;
+  min-height: 1.4em;
+}
+
+.numbers {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.numbers>div:nth-child(10) {
+  grid-column-end: 3;
+  grid-column-start: 1;
+}
+
+.numbers>div {
+  border: 1px solid green;
+  text-align: center;
+}
+
+.numbers>div:hover {
+  background-color: aquamarine;
+}
+
+.controls {
+  display: grid;
+  margin-top: 1em;
+  grid-template-columns: repeat(5, auto);
+  gap: 15px;
+  cursor: pointer;
+}
+
+.controls>div {
+  border: 1px solid tomato;
+  text-align: center;
+}
+
+.controls>div:hover {
+  background-color: brown;
+}
+
+.equal {
+  border: 1px solid rgb(0, 255, 119);
+  margin: 1em 0;
+  text-align: center;
+  background-color: rgba(222, 255, 231, 0.3);
+  padding: 10px 5px;
+  cursor: pointer;
+}
+
+.equal:hover {
+  background-color: rgb(75, 240, 119);
+}

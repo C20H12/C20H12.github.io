@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background-color: white;
+}
+
+.colorSel {
+  position: relative;
+  width: 600px;
+  height: 15px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.colorSel>.outputs {
+  position: absolute;
+  left: 630px;
+}
+
+.colorSel.r, .r .num {
+  background-color: #ff000070;
+}
+.colorSel.g, .g .num {
+  background-color: #00ff0070;
+}
+.colorSel.b, .b .num {
+  background-color: #0000ff70;
+}
+
+.outputs>.num {
+  border: 1px solid black;
+  padding: 1px;
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  bottom: 9px;
+}
+.outputs>.hex {
+  position: relative;
+  left: 45px;
+  bottom: 25px;
+}
+
+.outputColor {
+  position: absolute;
+  left: 670px;
+  transform: translateY(-5px);
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  position: absolute;
+  background: transparent;
+  width: calc(100% - 20px);
+}
+input[type=range]:focus {
+  border: 1px dotted black;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  position: relative;
+  bottom: 7px;
+  background-color: #3a7ec7;
+  height: 18px;
+  width: 10px;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: #ffffff;
+}
+
+.outputColorPreBox {
+  display: inline-block;
+  width: 340px;
+  background-color: white;
+  margin: 10px 3px;
+}
+.outputColorInvBox {
+  display: inline-block;
+  width: 340px;
+  background-color: black;
+  margin: 10px 3px;
+}
+
+.inputs {
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 600px;
+  margin: 2rem;
+}
+.inputs>.numbersWrap {
+  margin: 5px 10px;
+}
+.inputs input[type=number] {
+  width: 60%;
+}
+
+.outputColorInv {
+  margin: 10px 30px;
+  width: 700px;
+}
+.outputColorInv>.num {
+  border: 1px solid black;
+  display: inline-block;
+  padding: 0 2px;
+  width: 150px;
+}
+.outputColorInv>.hex {
+  position: relative;
+  left: 60px;
+}

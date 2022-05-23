@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="colorSel r">
+    <input type="range" min="0" max="255" step="1" value="255" id="r">
+    <div class="outputs">
+      <output for="r" class="num">255</output>
+      <output for="r" class="hex" data-hex>ff</output>
+    </div>
+  </div>
+  <div class="colorSel g">
+    <input type="range" min="0" max="255" step="1" value="255" id="g">
+    <div class="outputs">
+      <output for="g" class="num">255</output>
+      <output for="g" class="hex" data-hex>ff</output>
+    </div>
+  </div>
+  <div class="colorSel b">
+    <input type="range" min="0" max="255" step="1" value="255" id="b">
+    <div class="outputs">
+      <output for="b" class="num">255</output>
+      <output for="b" class="hex" data-hex>ff</output>
+    </div>
+  </div>
+
+  <div class="outputColor">
+    #ffffff
+  </div>
+
+  <div class="inputs">
+    <div class="numbersWrap">
+      R:
+      <input type="number" min="0" max="255" value="255" data-color="r">
+    </div>
+    <div class="numbersWrap">
+      G:
+      <input type="number" min="0" max="255" value="255" data-color="g">
+    </div>
+    <div class="numbersWrap">
+      B:
+      <input type="number" min="0" max="255" value="255" data-color="b">
+    </div>
+  </div>
+  
+  
+  <div class="outputColorPreBox">Color Selected</div>
+  <div class="outputColorInvBox">Color Inverted</div>
+  
+  <div class="outputColorInv">
+    R: <span class="num r">0</span>
+    G: <span class="num g">0</span>
+    B: <span class="num b">0</span>
+    <span class="hex">#000000</span>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
