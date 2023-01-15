@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>universe generation</title>
+  <script src="./index.js" defer></script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #seedInput {
+      margin: 1rem auto;
+      width: fit-content;
+      font-size: 1.5rem;
+    }
+
+    #main {
+      margin: 2rem auto 0 auto;
+      display: block;
+    }
+
+    #dialog {
+      margin: .5em auto;
+      display: block;
+    }
+
+    #props.show {
+      margin: .5em auto;
+      border: 1px solid blue;
+      width: fit-content;
+      padding: 0.5em;
+      display: grid;
+      grid-template-columns: 20rem 20rem;
+    }
+
+    #props.hide {
+      display: none;
+    }
+
+    #props > p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      border-bottom: 1px solid black;
+      border-left: 1px solid black;
+      padding: 0.2em;
+      text-align: left;
+    }
+
+    #props span {
+      float: right;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="seedInput">
+    <label for="seed">Seed:</label>
+    <input type="number" name="seed" id="gseed" min="0" max="2147483647" value="0">
+  </div>
+  <canvas height="512" width="480" id="main"></canvas>
+  <canvas height="250" width="500" id="dialog"></canvas>
+  <div id="props" class="hide"></div>
+</body>
+</html>
