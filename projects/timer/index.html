@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>simple timer</title>
+  <script src="./script.js" defer></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .section {
+      border: 1px solid black;
+      margin: 5em auto;
+    }
+
+    .outputWrap {
+      padding: 2rem;
+      font-size: 50px;
+      width: max-content;
+      margin: auto;
+    }
+
+    .numberWrap {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      height: 50px;
+      line-height: 50px;
+    }
+
+    input[type=number]{
+      margin: 0 1rem;
+      font-size: 30px;
+    }
+
+    .buttonsWrap {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+
+    button {
+      font-size: 30px;
+      margin: 0 1em;
+    }
+
+    #ticks {
+      display: block;
+      margin: .5em auto;
+      resize: none;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div id="timer" class="section">
+    <div class="outputWrap">
+      <output data-h>00</output>
+      :
+      <output data-m>00</output>
+      :
+      <output data-s>00</output>
+    </div>
+    <div class="numberWrap">
+      <input type="number" max="59" min="0" data-h>
+      H
+      <input type="number" max="59" min="0" data-m>
+      M
+      <input type="number" max="59" min="0" data-s>
+      S
+    </div>
+    <div class="buttonsWrap">
+      <button data-start>Start</button>
+      <button data-reset>Reset</button>
+    </div>
+  </div>
+  <div id="stopwatch" class="section">
+    <div class="outputWrap">
+      <output data-m>00</output>
+      :
+      <output data-s>00</output>
+      :
+      <output data-cs>00</output>
+    </div>
+    <div class="buttonsWrap">
+      <button data-start>Start</button>
+      <button data-reset>Reset</button>
+      <button data-pause>Pause</button>
+      <button data-tick>Tick</button>
+    </div>
+    <textarea name="ticks" id="ticks" cols="50" rows="10" readonly></textarea>    
+  </div>
+
+</body>
+</html>
