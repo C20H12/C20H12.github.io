@@ -63,7 +63,7 @@ Because the actual setup of shadowsocks is complicated, we will use the crystali
 ```
 wget –no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR.sh
 ```
-![get script](./images/Screenshot%202023-10-08%20004525.png)
+![get script](./images/Screenshot%202023-10-08%20004525.png)  
 ![got script](./images/Screenshot%202023-10-08%20004547.png)
 
 We need to give ourselves permission in order to run this script. (sounds like the whole theme of this guide is to give yourself permission)
@@ -83,7 +83,7 @@ Now, you will be presented with a lot of inputs.
 - Next, choose a protocol for authentication. `origin`, which is just string comparision of passwords, works pretty well.   
 - Finally, choose a obfuscation method. This makes the traffic more disguised as HTTP traffic and prevents packet inspectors to tell that it is a proxy. `hhtp_simple_compatible` works pretty well.
 
-![scripts input](./images/Screenshot%202023-10-08%20004828.png)
+![scripts input](./images/Screenshot%202023-10-08%20004828.png)  
 ![script inputs](./images/Screenshot%202023-10-08%20004811.png)
 
 Press any key to start the installation. This takes a while. When it has finished, a success page will show up.
