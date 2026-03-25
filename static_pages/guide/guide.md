@@ -1,5 +1,5 @@
 # Complete Guide on How to Set Up a ShadowSocks Server
-## For the purposes of bypassing firewall restrictions - author: C20H12untitled
+For the purposes of bypassing firewall restrictions - author: C20H12untitled
 ## Preface
 I am sure that you had this frustration before: when you are connected to the school's internet and you want to browse a certain website, this content filter thing pops out from nowhere and starts yelling at you that the website is somehow "insecure". Or when you are using a certain social media app, it would be unable to connect to its servers, rendering it useless.  
 
