@@ -28,7 +28,7 @@ You need:
 
 Example:
 
-```asm
+```mipsasm
 ADDR_DSPL:       .word 0x10008000
 
 bmp_buffer_size: .word 40000
@@ -48,7 +48,7 @@ Important detail:
 
 Example flow:
 
-```asm
+```mipsasm
 # fd = open(filename, read_only)
 li $v0, 13
 la $a0, BMP_FILENAME
@@ -82,7 +82,7 @@ If your images are small and values fit in 16 bits, `lhu` can work for quick lab
 
 Example (quick lab version):
 
-```asm
+```mipsasm
 la  $t9, bmp_buffer
 lhu $t0, 18($t9)   # width
 lhu $t1, 22($t9)   # height
@@ -104,7 +104,7 @@ row_stride = (row_data_bytes + 3) & 0xFFFC
 
 MIPS version:
 
-```asm
+```mipsasm
 mul  $a2, $t0, 3         # row_data_bytes
 add  $a3, $a2, 3
 andi $a3, $a3, 0xFFFC    # row_stride
@@ -118,7 +118,7 @@ A practical loop:
 - `i = height - 1` down to `0`
 - row start byte index = `offset + i * row_stride`
 
-```asm
+```mipsasm
 sub $t3, $t1, 1          # i = height - 1
 row_loop:
   ...
@@ -132,7 +132,7 @@ Inside a row:
 - `j = 0` to `row_data_bytes - 1`, step by 3
 - read B, G, R from `byte_pos + j`
 
-```asm
+```mipsasm
 li $t5, 0
 col_loop:
   ...
@@ -144,7 +144,7 @@ blt $t5, $a2, col_loop
 
 Pack channels into `0x00RRGGBB`:
 
-```asm
+```mipsasm
 add $t6, $t4, $t5          # blue_idx = byte_pos + j
 add $t7, $t6, 1            # green_idx = byte_pos + j + 1
 add $t8, $t6, 2            # red_idx = byte_pos + j + 2
@@ -168,7 +168,7 @@ For a 256-pixel-wide display where each pixel is 4 bytes:
 
 Example write:
 
-```asm
+```mipsasm
 div $t6, $t5, 3
 add $t6, $t6, $a0        # pixel_x
 
@@ -254,7 +254,7 @@ def draw_bmp_to_display(
 ```
 
 ## MIPS 
-```asm
+```mipsasm
   .data
 
 __unused_pusher: .space 17000000
